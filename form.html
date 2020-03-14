@@ -4,45 +4,145 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <title>Document</title>
   </head>
   <body>
-    <h1 id="title">Survey Form</h1>
-    <p id="description">This is the survey form</p>
-    <form id="survey-form">
-      <label id="name-label" for="name">
-        Name:
-      </label>
-      <input type="text" id="name" placeholder="Enter your name" required />
-      <label id="email-label" for="email">
-        Email:
-      </label>
-      <input type="email" name="email" id="email" placeholder="Enter your email" required />
-      <label id="number-label" for="number">
-        Number:
-      </label>
-      <input type="number" id="number" min="1" max="10" placeholder="Enter you number" />
+    <div class="container">
+      <h1 id="title">Survey Form</h1>
+      <p id="description">This is the survey form</p>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            required
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">
+            Email:
+          </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number">
+            Number:
+          </label>
+          <input
+            type="number"
+            id="number"
+            min="1"
+            max="10"
+            placeholder="Enter you number"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label for="dropdown" id="dropdown-label">Option</label>
+          <select id="dropdown" class="form-control">
+            <option value="option1">Option 1</option>
+            <option value="option2"> Option 2</option>
+          </select>
+        </div>
 
-      <label for="dropdown" id="dropdown-label">Option</label>
-      <select id="dropdown">
-        <option value="option1">Option 1</option>
-        <option value="option2"> Option 2</option>
-      </select>
+        <div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="radio" id="radio-label"
+              >Choose One</label
+            >
+            <input
+              type="radio"
+              name="radios"
+              id="radio1"
+              value="one"
+              class="form-control"
+            />
+          </div>
+      
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="radio" id="radio-label"
+              >Choose Two</label
+            >
+            <input
+              type="radio"
+              name="radios"
+              id="radio2"
+              value="two"
+              class="form-control"
+            />
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="radio" id="radio-label"
+              >Choose Three</label
+            >
+            <input
+              type="radio"
+              name="radios"
+              id="radio3"
+              value="three"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">Choose one </label>
+            <input
+              type="checkbox"
+              id="checkbox2"
+              name="checkboxTwo"
+              value="check two"
+              class="form-check-input"
+            />
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">Choose two </label>
+            <input
+              type="checkbox"
+              id="checkbox1"
+              name="checkboxOne"
+              value="check one"
+              class="form-check-input"
+            />
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">Choose three </label>
+            <input
+              type="checkbox"
+              id="checkbox3"
+              name="checkboxThree"
+              value="check three"
+              class="form-check-input"
+            />
+          </div>
+        </div>
+        <div>
+        <div class="form-group">
+          <label>Text Area</label>
+          <textarea id="textarea" class="form-control"></textarea>
+        </div>
 
-      <label for="radio" id="radio-label">Choose One</label>
-      <input type="radio" name="radios" id="radio1" value="one" />
-      <input type="radio" name="radios" id="radio2" value="two" />
-      <input type="radio" name="radios" id="radio3" value="three" />
-
-      <label>Choose more</label>
-      <input type="checkbox" id="checkbox1" name="checkboxOne" value="check one" />
-      <input type="checkbox" id="checkbox2" name="checkboxTwo" value="check two" />
-      <input type="checkbox" id="checkbox3" name="checkboxThree" value="check three" />
-      <br />
-      <label>Text Area</label>
-      <textarea id="textarea"></textarea>
-      <button type="submit" id="submit">Submit</button>
-    </form>
+        <button type="submit" id="submit" class="btn btn-primary btn-large">
+          Submit
+        </button>
+      </form>
+    </div>
   </body>
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
